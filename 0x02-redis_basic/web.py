@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''This is a module with tools for request caching and tracking.
+'''This is a module with tools for request caching and tracking
 '''
 import redis
 import requests
@@ -32,8 +32,7 @@ def data_cacher(method: Callable) -> Callable:
 
 @data_cacher
 def get_page(url: str) -> str:
-    '''This returns the content of a URL after caching the
-    request's response,
+    '''Returns the content of a URL after caching the request's response,
     and tracking the request.
     '''
     return requests.get(url).text
